@@ -155,6 +155,7 @@ const getCompanyClients = require("./data/getCompanyClients");
 const getTierById = require("./data/getTierById");
 const calcGroupAuditHistory = require("./data/calcGroupAuditHistory");
 const getUsersAndClients = require("./data/getUsersAndClients");
+const getClientsById = require("./data/getClientsById");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1859,6 +1860,12 @@ app.post("/api/userclient/getuserclientlist", function (req, res) {
 app.post("/api/userclient/updateuserorgroupclientmapping", function (req, res) {
   console.log("/api/updateuserorgroupclientmapping");
   res.status(200).send({ id: 1 });
+});
+
+//userdefaults
+app.get("/api/userdefaults/getclients/:id", function (req, res) {
+  console.log("/api/getpresetratebyid");
+  res.status(200).send(getClientsById());
 });
 
 //server port
