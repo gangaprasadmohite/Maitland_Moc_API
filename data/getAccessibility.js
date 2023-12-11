@@ -267,5 +267,11 @@ module.exports = () => {
       delete: true,
       create: true,
     },
+    userclient: {
+      view: true,
+      edit: true,
+      delete: true,
+      create: true,
+    },
   };
 };

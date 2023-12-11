@@ -154,6 +154,7 @@ const getDirections = require("./data/getDirections");
 const getCompanyClients = require("./data/getCompanyClients");
 const getTierById = require("./data/getTierById");
 const calcGroupAuditHistory = require("./data/calcGroupAuditHistory");
+const getUsersAndClients = require("./data/getUsersAndClients");
 
 app.get("/api/user/getUserDetails", function (req, res) {
   console.log("/api/getuserDetails");
@@ -1846,6 +1847,18 @@ app.post("/api/calculationrequests/addcalculationrequest", function (req, res) {
 app.get("/api/presetrate/getpresetratebyid/:id", function (req, res) {
   console.log("/api/getpresetratebyid");
   res.status(200).send(getPresetRateById());
+});
+
+//client mapping
+
+app.post("/api/userclient/getuserclientlist", function (req, res) {
+  console.log("/api/getuserclientlist");
+  res.status(200).send(getUsersAndClients());
+});
+
+app.post("/api/userclient/updateuserorgroupclientmapping", function (req, res) {
+  console.log("/api/updateuserorgroupclientmapping");
+  res.status(200).send({ id: 1 });
 });
 
 //server port

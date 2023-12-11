@@ -44,6 +44,7 @@ module.exports = () => {
           type: "String",
           dataType: "int",
           lookupType: "Portfolio",
+          // dataUrl: "text",
         },
       ],
       allowedFormats: [
